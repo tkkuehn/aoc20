@@ -16,6 +16,6 @@ def find_sum_3(nums, expected_sum):
     raise Exception("No triplet summed to {}".format(expected_sum))
 
 if __name__ == "__main__":
-    input_nums = utils.parse_file_lines("aoc20/day1_input.txt", int)
+    input_nums = utils.parse_file_lines("day1_input.txt", int)
     print("Part 1: {}".format(find_sum_2(input_nums, 2020)))
     print("Part 2: {}".format(find_sum_3(input_nums, 2020)))
