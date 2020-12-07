@@ -34,12 +34,14 @@ def parse_line(spec_string, relationship_map):
         return
     bag, contents = content_match.groups()
     contents = contents.strip().split(", ")
-    contents = [re.fullmatch(r"(\d+) ([a-z ]+) bags?,?", content).groups() for content in contents]
+    contents = [re.fullmatch(r"(\d+) ([a-z ]+) bags?,?", content).groups()
+                for content in contents]
     contents = [(int(content[0]), content[1]) for content in contents]
 
     for content in contents:
         relationship_map[bag]["contains"].append(content)
         relationship_map[content[1]]["contained by"].append((content[0], bag))
+
 
 if __name__ == "__main__":
     spec = utils.parse_file_lines("day7_input.txt", str)

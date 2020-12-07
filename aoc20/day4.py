@@ -91,7 +91,7 @@ def check_passport_2(passport_string):
                 print("Invalid hcl: {}".format(value))
                 return False
         elif name == "ecl":
-            if not value in ("amb", "blu", "brn", "gry", "grn", "hzl", "oth"):
+            if value not in ("amb", "blu", "brn", "gry", "grn", "hzl", "oth"):
                 print("Invalid ecl: {}".format(value))
                 return False
         elif name == "pid":

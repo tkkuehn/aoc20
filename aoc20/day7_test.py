@@ -3,6 +3,7 @@ import unittest
 import day7
 import utils
 
+
 class TestDay7(unittest.TestCase):
     def test_first(self):
         spec = utils.parse_file_lines("day7_test_input1.txt", str)

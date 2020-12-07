@@ -1,6 +1,8 @@
 import unittest
 
-import day2, utils
+import day2
+import utils
+
 
 class TestDay1(unittest.TestCase):
     def test_first(self):

@@ -2,6 +2,7 @@ import re
 
 import utils
 
+
 def find_valid_passwords(password_strings):
     valid_passwords = 0
 
@@ -11,6 +12,7 @@ def find_valid_passwords(password_strings):
 
     return valid_passwords
 
+
 def find_valid_passwords_2(password_strings):
     valid_passwords = 0
 
@@ -19,6 +21,7 @@ def find_valid_passwords_2(password_strings):
             valid_passwords += 1
 
     return valid_passwords
+
 
 def check_password(password_string):
     min_letters, max_letters, policy_letter, password = re.match(
@@ -30,6 +33,7 @@ def check_password(password_string):
 
     return min_letters <= num_letters <= max_letters
 
+
 def check_password_2(password_string):
     position_1, position_2, policy_letter, password = re.match(
         r"(\d+)-(\d+) ([a-z]): ([a-z]+)",
@@ -39,6 +43,7 @@ def check_password_2(password_string):
 
     return ((password[position_1] == policy_letter)
             ^ (password[position_2] == policy_letter))
+
 
 if __name__ == "__main__":
     parsed_strings = utils.parse_file_lines("day2_input.txt", str)
